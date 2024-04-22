@@ -15,10 +15,12 @@ public class TwoSum {
 
     //no extra spane
     // O(n^2)
+    //notice won't work for (a-b) condition
     private static int[] findPairWithSum(int[] ar, int k){
         int n = ar.length;
         for(int i =0;i<n;i++){
-            for(int j =0;j<n;j++){
+            //optimised
+            for(int j =i+1;j<n;j++){
                 if(i==j){
                     continue;
                 }
